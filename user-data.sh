@@ -75,6 +75,8 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl restart nginx
 
-# You may add MySQL commands to create a WordPress database and user
+# Install Certbot for Let's Encrypt (if not already installed)
+sudo apt-get install -y certbot python3-certbot-nginx
 
-# You may add commands to set permissions and ownership
+# Request a certificate for the domain, agreeing to the Terms of Service and providing an email address
+sudo certbot --nginx -d wordpresstask.ddns.net --agree-tos --email manivardha999@gmail.com --no-eff-email

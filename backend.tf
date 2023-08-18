@@ -1,7 +1,9 @@
-/* terraform {
+ terraform {
   backend "s3" {
     bucket = "wordpress-assessment-us-east-1"
-    key    = "wordpress-assessment-dev.tf"
+    key    = "environment/dev/terraform.tfstate"
     region = "us-east-1"
+    profile = "default"
   }
-} */
+} 
+
